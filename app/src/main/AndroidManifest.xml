@@ -25,7 +25,9 @@
         <activity android:name=".UserArea" />
         <activity android:name=".Showqrcode" />
         <activity android:name=".Register" />
-        <activity android:name=".Generatecode"></activity>
+        <activity android:name=".Generatecode" />
+        <activity android:name=".Scanqrcode" />
+        <activity android:name=".Backgroundscan"></activity>
     </application>
 
 </manifest>
