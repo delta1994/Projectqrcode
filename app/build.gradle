@@ -9,7 +9,14 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    configurations {
+        all*.exclude group: 'com.android.volley', module: 'volley:volley'
+        all*.exclude group: 'com.mcxiaoke.volley', module: 'volley:library-aar'
     }
     buildTypes {
         release {
@@ -28,20 +35,25 @@ allprojects {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.google.android.gms:play-services-vision:11.2.0'
+    compile 'com.google.android.gms:play-services-vision:11.0.4'
+    compile 'com.google.android.gms:play-services-identity:11.0.4'
+    compile 'com.google.android.gms:play-services-plus:11.0.4'
+    compile 'com.google.android.gms:play-services-gcm:11.0.4'
     compile 'com.google.zxing:core:3.3.0'
     compile 'com.journeyapps:zxing-android-embedded:3.3.0'
     compile 'com.android.volley:volley:1.0.0'
     compile 'com.mcxiaoke.volley:library:1.0.18'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.1'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.parse:parse-android:1.10.3'
     testCompile 'junit:junit:4.12'
+    compile 'com.squareup.picasso:picasso:2.3.2'
 }
