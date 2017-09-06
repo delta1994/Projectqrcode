@@ -36,7 +36,7 @@ public class AdminArea extends AppCompatActivity {
     }
 
     public void btnA_Scanqrcode(View view){
-        Intent intent = new Intent(AdminArea.this, Scanqrcode.class);
+        Intent intent = new Intent(AdminArea.this, Backgroundscan.class);
         startActivity(intent);
     }
 }

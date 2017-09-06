@@ -27,7 +27,8 @@
         <activity android:name=".Register" />
         <activity android:name=".Generatecode" />
         <activity android:name=".Scanqrcode" />
-        <activity android:name=".Backgroundscan"></activity>
+        <activity android:name=".Backgroundscan" />
+        <activity android:name=".Editdata"></activity>
     </application>
 
 </manifest>
